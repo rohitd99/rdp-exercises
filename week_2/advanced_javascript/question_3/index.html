@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+    <title>Dropdown</title>
+  </head>
+  <body>
+    <main>
+      <div class="dropdown">
+        <div class="dropdown__btn">
+          <span>Options</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="dropdown__options dropdown__options__hidden">
+          <ul>
+            <li class="dropdown__option">
+              <i class="fa-solid fa-pen icon"></i><span>Edit</span>
+            </li>
+            <li class="dropdown__option">
+              <i class="fa-regular fa-copy icon"></i><span>Duplicate</span>
+            </li>
+            <li class="dropdown__option">
+              <i class="fa-solid fa-box-archive icon"></i><span>Archive</span>
+            </li>
+            <li class="dropdown__option">
+              <i class="fa-solid fa-arrow-up-right-from-square icon"></i
+              ><span>Move</span>
+            </li>
+            <li class="dropdown__option">
+              <i class="fa-solid fa-trash icon"></i><span>Delete</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
