@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App {
+
+    min-height: 100vh;
+    background: linear-gradient(to right,#c8b6ff,#e7c6ff);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.signUp{
+
+    background-color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+}
+.signUp form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.signUp label{
+
+    margin-inline-end: 1.5rem;
+}
+
+.signUp button{
+    color: white;
+    background-color: #9f86c0;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.signUp button:focus{
+    outline: 2px solid #6f2dbd;
+}
+
+.inputField{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
