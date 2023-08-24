@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.save__btn{
+    border: 0;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 35px;
+    cursor: pointer;
+}
+.save__btn--red{
+    background-color: red;
+}
+
+.save__btn--black{
+    background-color: black;
+}
