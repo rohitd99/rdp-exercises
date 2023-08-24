@@ -44,7 +44,7 @@ body{
     background-color: var(--bg-btn-hover);
 }
 
-.dropdown__options__active{
+.dropdown__options--active{
     background-color: white;
     width: 17.5rem;
     border-radius: 8px;
@@ -53,7 +53,7 @@ body{
     padding: 0.75rem;
 }
 
-.dropdown__options__hidden{
+.dropdown__options--hidden{
     height: 0px;
     overflow: hidden;
 }

@@ -5,12 +5,7 @@ const option = document.querySelector(".dropdown__options");
 
 button.addEventListener("click",() =>{
     
-    if(option.classList.contains("dropdown__options__active"))
-    {
-        option.classList.remove("dropdown__options__active");
-        option.classList.add("dropdown__options__hidden");
-    }else{
-        option.classList.remove("dropdown__options__hidden");
-        option.classList.add("dropdown__options__active");
-    }
+    option.classList.toggle("dropdown__options--active");
+    option.classList.toggle("dropdown__options--hidden");
+    
 });
