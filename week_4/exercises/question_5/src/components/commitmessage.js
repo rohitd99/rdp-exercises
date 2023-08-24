@@ -15,7 +15,7 @@ function CommitMessage()
         const data = await response.json();
         const newMessage = data.commit_message;
         console.log(newMessage);
-        setMessage(msg => newMessage);
+        setMessage(newMessage);
         
     }
 
