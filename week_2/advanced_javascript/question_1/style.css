@@ -16,6 +16,7 @@ body{
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
     border-radius: 35px;
+    cursor: pointer;
 }
 .save__btn--red{
     background-color: red;
