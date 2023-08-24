@@ -19,7 +19,7 @@ const updatedPrice = filteredFruits.map((fruit) => {
     return newFruit;
 });
 
-updatedPrice.map((fruit) => {
+updatedPrice.forEach((fruit) => {
     console.log(`${fruit.name} now costs ${fruit.price}`);
 });
 

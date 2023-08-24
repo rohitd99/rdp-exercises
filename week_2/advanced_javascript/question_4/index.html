@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <title>Tab Menu</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li class="category category__recent category__selected">Recent</li>
+            <li class="category category__popular category__hover">Popular</li>
+            <li class="category category__trending category__hover">
+              Trending
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="card card__recent">
+          <div class="card__topic">
+            <h3>Does drinking coffee make you smarter?</h3>
+            <p>
+              <span>5h ago</span><span>&#8226;</span><span>5 comments</span
+              ><span>&#8226;</span><span>2 shares</span>
+            </p>
+          </div>
+          <div class="card__topic">
+            <h3>So you've bought coffee... now what?</h3>
+            <p>
+              <span>2h ago</span><span>&#8226;</span><span>3 comments</span
+              ><span>&#8226;</span><span>2 shares</span>
+            </p>
+          </div>
+        </div>
+        <div class="card card__popular card__hidden">
+          <div class="card__topic">
+            <h3>Is tech making coffee better or worse?</h3>
+            <p>
+              <span>Jan 27</span><span>&#8226;</span><span>29 comments</span
+              ><span>&#8226;</span><span>16 shares</span>
+            </p>
+          </div>
+          <div class="card__topic">
+            <h3>The most innovative things happening in coffee</h3>
+            <p>
+              <span>Mar 19</span><span>&#8226;</span><span>24 comments</span
+              ><span>&#8226;</span><span>12 shares</span>
+            </p>
+          </div>
+        </div>
+        <div class="card card__trending card__hidden">
+          <div class="card__topic">
+            <h3>Ask me anything: 10 answers to your questions about coffee</h3>
+            <p>
+              <span>2d ago</span><span>&#8226;</span><span>9 comments</span
+              ><span>&#8226;</span><span>5 shares</span>
+            </p>
+          </div>
+          <div class="card__topic">
+            <h3>The worst advice we've ever heard about coffee</h3>
+            <p>
+              <span>4d ago</span><span>&#8226;</span><span>1 comments</span
+              ><span>&#8226;</span><span>2 shares</span>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
