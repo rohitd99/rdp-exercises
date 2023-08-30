@@ -15,7 +15,7 @@ function Main()
             <button className="ml-5 mt-6 py-2 px-12 bg-black text-white rounded-full">
                 Try it
             </button>
-            <div className="flex overflow-x-scroll">
+            <div className="flex overflow-x-auto">
                 <Shape classes="min-w-[20rem] w-80 h-80 bg-sky-500 mx-5 my-8 rounded-3xl flex justify-center items-center" 
                        classesInside="w-72 h-72 bg-pink-400 rounded-full">     
                 </Shape>
