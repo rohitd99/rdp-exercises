@@ -7,14 +7,11 @@ function Header(props)
         "Trending"
     ];
     
-    function handleClick(e,tabIndex)
+    function handleClick(tabIndex)
     {
         setSelectedTab(tabIndex);
-        // console.log(e);
-        e.target.classList.add("category__selected");
-        e.target.classList.remove("category__hover");
     }
-    
+
     return(
         <header>
             <nav>
@@ -26,7 +23,7 @@ function Header(props)
                             
                             return(
                                 
-                                <li className={classes} onClick={(e) => handleClick(e,index)}>{category}</li>
+                                <li className={classes} onClick={(e) => handleClick(index)}>{category}</li>
                             );
                         })
                     }
