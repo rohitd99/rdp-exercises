@@ -1,15 +1,15 @@
 import {useEffect} from 'react';
 
-const WithLogging = (Component) => {
+const WithLogging = (WrappedComponent) => {
     
     return function WithLoggingComponent(props)
     {
         useEffect(() => {
-            console.log(Component.name + " is rendered");
+            console.log(WrappedComponent.componentName + " is rendered");
         },[]);
 
         return(
-            <Component {...props}></Component>
+            <WrappedComponent {...props}></WrappedComponent>
         );
     };
 

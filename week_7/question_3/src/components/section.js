@@ -10,4 +10,6 @@ function Section(props)
     );
 }
 
+Section.componentName = "Section";
+
 export default WithLogging(Section);

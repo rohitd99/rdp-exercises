@@ -13,4 +13,6 @@ function Main(props)
     );
 }
 
+Main.componentName = "Main";
+
 export default WithLogging(Main);
