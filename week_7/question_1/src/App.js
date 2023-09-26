@@ -11,7 +11,7 @@ function App() {
   const today = new Date();
   const defaultTime = new Date(today.getFullYear(),today.getMonth(),today.getDate(),0,0,0);
   const [value,setValue] = useState(new Date(today.getFullYear(),today.getMonth(),today.getDate(),0,0,0));
-  const [msLeft,setMsLeft] = useState(new Date(today.getFullYear(),today.getMonth(),today.getDate(),0,0,0).valueOf());
+  let msLeft = useRef(0);
   const [pause,setPause] = useState(false);
 
   const hoursRef = useRef();
@@ -21,24 +21,24 @@ function App() {
 
   useEffect(() => {
     
-    if(msLeft <= defaultTime.valueOf())
+    if(msLeft.current <= defaultTime.valueOf())
     {
       clearInterval(countdown.current);
     }else if(pause){
       countdown.current = setInterval(decreaseTime,1000);
     }
     return () => clearInterval(countdown.current);
-  },[pause,msLeft]);
+  },[pause]);
 
   function decreaseTime()
   {
-    const remainingTime = new Date(msLeft - 1000);
+    const remainingTime = new Date(msLeft.current);
     displayTimeLeft(remainingTime.getHours(),remainingTime.getMinutes(),remainingTime.getSeconds());
-    if(msLeft < defaultTime.valueOf())
+    if(msLeft.current <= defaultTime.valueOf())
     {
       clearInterval(countdown.current);
     }else{
-      setMsLeft(prev => prev - 1000);
+      msLeft.current = msLeft.current - 1000;
     }
   }
 
@@ -46,12 +46,13 @@ function App() {
   {
     const newDate = new Date(today.getFullYear(),today.getMonth(),today.getDate(),newValue.$H,newValue.$m,newValue.$s);
     setValue(newDate);
-    setMsLeft(newDate.valueOf());
+    msLeft.current = newDate.valueOf();
     displayTimeLeft(newValue.$H,newValue.$m,newValue.$s);
   }
 
   function clear()
   {
+    msLeft.current = 0;
     setValue(defaultTime);
     clearInterval(countdown.current);
     setPause(false);
